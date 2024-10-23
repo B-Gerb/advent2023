@@ -7,6 +7,9 @@ public class Main {
     int dayTwo2 = daytwo.powerSet("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day2Info.txt");
     int dayThree1 = daythree.StringAjacent("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day3Info.txt");
     int dayThree2 = daythree.gearBox("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day3Info.txt");
-    System.out.println(dayThree2);
+    int dayFour1 = dayfour.score("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day4Info.txt");
+    int dayFour2 = dayfour.copyCards("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day4Info.txt");
+
+    System.out.println(dayFour2);
   }
 }
