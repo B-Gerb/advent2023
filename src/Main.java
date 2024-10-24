@@ -9,7 +9,8 @@ public class Main {
     int dayThree2 = daythree.gearBox("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day3Info.txt");
     int dayFour1 = dayfour.score("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day4Info.txt");
     int dayFour2 = dayfour.copyCards("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day4Info.txt");
+    Long dayFive1 = dayfive.smallestSoilWalk("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day5Info.txt");
 
-    System.out.println(dayFour2);
+    System.out.println(dayFive1);
   }
 }
