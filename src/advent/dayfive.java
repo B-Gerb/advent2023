@@ -10,11 +10,89 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class dayfive {
-
-  public static long smallestSoilWalk(String filename){
+  public static long rangeSoilWalk(String filename){
     try {
       File file = new File(filename);
       Scanner sc = new Scanner(file);
+      String seed = sc.nextLine();
+      Map<Long, Long> seeds = new HashMap<>();
+      seed = seed.split(":")[1];
+      String[] vals = seed.split(" ");
+      for(int i =1; i<vals.length; i+=2){
+          seeds.put(Long.parseLong(vals[i]),Long.parseLong(vals[i+1]) + Long.parseLong(vals[i])-1);
+      }
+      sc.nextLine();
+      while(sc.hasNextLine()){
+        String s = sc.nextLine();
+        if(s.indexOf("-") != -1){
+          s = sc.nextLine();
+          Map<Long, Long> newRange = new HashMap<>();
+          Map<Long, Long> valuesNotUsed = new HashMap<>();
+
+
+          while(s.length() != 0) {
+            valuesNotUsed = new HashMap<>();
+            vals = s.split(" ");
+            long left = Long.parseLong(vals[0]);
+            long right = Long.parseLong(vals[1]);
+            long range = Long.parseLong(vals[2]);
+            for(long keyVal : seeds.keySet()){
+              if(keyVal < right && seeds.get(keyVal) > right+range){
+                newRange.put(left, left +range-1); // good
+                valuesNotUsed.put(keyVal, right-1);
+                valuesNotUsed.put(right+range, seeds.get(keyVal));
+
+              }
+              else if(keyVal < right && (seeds.get(keyVal) >= right && seeds.get(keyVal) <= right + range)){
+                long dist = seeds.get(keyVal) - right;
+                newRange.put(left, left+dist);
+                valuesNotUsed.put(keyVal, right-1);
+              }
+              else if(keyVal >= right && keyVal <= right+range && seeds.get(keyVal) >= right + range){
+                long dist = keyVal - right;
+                newRange.put(left+dist, left+range-1);
+                valuesNotUsed.put(right+range, seeds.get(keyVal));
+
+              }
+              else if(keyVal >= right && keyVal <= right+range && seeds.get(keyVal) >= right && seeds.get(keyVal) <= right+range){
+                long distL = keyVal - right;
+                long distR = seeds.get(keyVal) - right;
+
+                newRange.put(left+distL, left+distR);
+              }
+              else{
+                valuesNotUsed.put(keyVal, seeds.get(keyVal));
+              }
+            }
+            seeds = valuesNotUsed;
+
+            if(!sc.hasNextLine()) break;
+            s = sc.nextLine();
+          }
+
+          newRange.putAll(valuesNotUsed);
+          seeds = newRange;
+        }
+      }
+      Long min = Long.MAX_VALUE;
+      for(Long val : seeds.keySet()) {
+        if(val < min) min = val;
+      }
+
+      return min;
+    }
+    catch(Exception e){
+      System.out.println(e);
+      return -1;
+    }
+  }
+
+
+
+
+  public static long smallestSoilWalk(String filename){
+    try (Scanner sc = new Scanner( new File(filename)))
+    {
       String seed = sc.nextLine();
       Map<Long, Boolean> seeds = new HashMap<>();
       seed = seed.split(":")[1];
@@ -55,17 +133,6 @@ public class dayfive {
               }
 
             }
-//            for (long i = 0; i < range; i++) {
-//              if (seeds.containsKey(i + left) && !seeds.get(i+left)) {
-//                seeds.remove(i + left);
-//                if(seeds.containsKey(i+right)){
-//                  tooAddLater.add(i+right);
-//                }
-//                else {
-//                  seeds.put(i + right, true);
-//                }
-//              }
-//            }
             if(!sc.hasNextLine()) break;
             s = sc.nextLine();
           }
