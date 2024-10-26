@@ -10,8 +10,10 @@ public class Main {
 //    int dayFour1 = dayfour.score("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day4Info.txt");
 //    int dayFour2 = dayfour.copyCards("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day4Info.txt");
 //    Long dayFive1 = dayfive.smallestSoilWalk("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day5Info.txt");
-    Long dayFive2 = dayfive.rangeSoilWalk("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day5Info.txt");
+//    Long dayFive2 = dayfive.rangeSoilWalk("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day5Info.txt");
+//    int daySix1 = daysix.timeSpent("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day6Info.txt");
+    long daySix2 = daysix.oneRace("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day6Info.txt");
 
-    System.out.println(dayFive2);
+    System.out.println(daySix2);
   }
 }
