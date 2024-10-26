@@ -11,9 +11,8 @@ import java.util.Set;
 
 public class dayfive {
   public static long rangeSoilWalk(String filename){
-    try {
-      File file = new File(filename);
-      Scanner sc = new Scanner(file);
+    try (Scanner sc = new Scanner( new File(filename)))
+    {
       String seed = sc.nextLine();
       Map<Long, Long> seeds = new HashMap<>();
       seed = seed.split(":")[1];

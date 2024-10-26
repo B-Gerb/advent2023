@@ -9,9 +9,8 @@ public class daytwo {
       int red = 12;
       int green = 13;
       int blue = 14;
-      try{
-        File file = new File(fileName);
-        Scanner s = new Scanner(file);
+    try (Scanner s = new Scanner( new File(fileName)))
+    {
         while(s.hasNextLine()){
           String line = s.nextLine();
           String first = line.split(":")[0];
@@ -57,9 +56,8 @@ public class daytwo {
   public static int powerSet(String fileName) {
     int total =0;
 
-    try{
-      File file = new File(fileName);
-      Scanner s = new Scanner(file);
+    try (Scanner s = new Scanner( new File(fileName)))
+    {
       while(s.hasNextLine()){
         int red = 0;
         int green = 0;

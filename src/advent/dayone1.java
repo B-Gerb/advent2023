@@ -15,9 +15,8 @@ public class dayone1 {
     boolean firstNum = false;
     int first =0;
     int last = 0;
-    try {
-      File file=new File(fileName);
-      Scanner sc=new Scanner(file);
+    try (Scanner sc = new Scanner( new File(fileName)))
+    {
       while(sc.hasNextLine()){
         String s = sc.nextLine();
         for (int i = 0; i < s.length(); i++) {
@@ -56,9 +55,8 @@ public class dayone1 {
     map1.put("seven", "7");
     map1.put("eight", "8");
     map1.put("nine", "9");
-    try {
-      File file = new File(fileName);
-      Scanner sc = new Scanner(file);
+    try (Scanner sc = new Scanner( new File(fileName)))
+    {
       while (sc.hasNextLine()) {
         String s = sc.nextLine();
         iterationVal = getFirst(s)*10+getLast(s);
@@ -87,9 +85,8 @@ public class dayone1 {
     map.put("seven", "s7n");
     map.put("eight", "e8t");
     map.put("nine", "n9e");
-    try {
-      File file=new File(fileName);
-      Scanner sc=new Scanner(file);
+    try (Scanner sc = new Scanner( new File(fileName)))
+    {
       while(sc.hasNextLine()){
         String s = sc.nextLine();
         for (String s1 : map.keySet()) {

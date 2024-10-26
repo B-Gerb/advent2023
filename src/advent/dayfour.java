@@ -9,10 +9,10 @@ import java.util.*;
 public class dayfour {
 
   public static int score(String filename){
-    try {
+     try (Scanner sc = new Scanner( new File(filename)))
+      {
       int total = 0;
-      File file = new File(filename);
-      Scanner sc = new Scanner(file);
+
       List<String> values = new ArrayList<>();
       while(sc.hasNextLine()) values.add(sc.nextLine());
       for (String value : values) {
@@ -39,10 +39,9 @@ public class dayfour {
     }
   }
   public static int copyCards(String filename){
-    try {
       int total = 0;
-      File file = new File(filename);
-      Scanner sc = new Scanner(file);
+      try (Scanner sc = new Scanner( new File(filename)))
+      {
       List<String> values = new ArrayList<>();
       while(sc.hasNextLine()) values.add(sc.nextLine());
       int amtCards = values.size();

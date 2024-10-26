@@ -8,11 +8,10 @@ import java.util.Scanner;
 
 public class daythree {
   public static int StringAjacent(String filename) {
-    try {
       int total = 0;
       int value;
-      File file = new File(filename);
-      Scanner sc = new Scanner(file);
+      try (Scanner sc = new Scanner( new File(filename)))
+      {
       List<String> values = new ArrayList<>();
       while (sc.hasNextLine()) values.add(sc.nextLine());
       Map<Integer, List<Integer>> cordinates = new HashMap<>();
@@ -65,11 +64,10 @@ public class daythree {
   }
 
   public static int gearBox(String filename){
-    try {
       int total = 0;
       int value;
-      File file = new File(filename);
-      Scanner sc = new Scanner(file);
+      try (Scanner sc = new Scanner( new File(filename)))
+      {
       List<String> values = new ArrayList<>();
       while (sc.hasNextLine()) values.add(sc.nextLine());
       for (int r = 0; r < values.size(); ++r) {
