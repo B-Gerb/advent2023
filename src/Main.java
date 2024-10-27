@@ -12,8 +12,11 @@ public class Main {
 //    Long dayFive1 = dayfive.smallestSoilWalk("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day5Info.txt");
 //    Long dayFive2 = dayfive.rangeSoilWalk("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day5Info.txt");
 //    int daySix1 = daysix.timeSpent("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day6Info.txt");
-    long daySix2 = daysix.oneRace("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day6Info.txt");
+//    long daySix2 = daysix.oneRace("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day6Info.txt");
+    dayseven seven = new dayseven();
+//    int daySeven1 = seven.handRanking("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day7Info.txt", 1);
+    int daySeven2= seven.handRanking("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day7Info.txt", 2);
 
-    System.out.println(daySix2);
+    System.out.println(daySeven2);
   }
 }
