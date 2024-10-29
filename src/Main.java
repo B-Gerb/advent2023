@@ -15,8 +15,10 @@ public class Main {
 //    long daySix2 = daysix.oneRace("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day6Info.txt");
     dayseven seven = new dayseven();
 //    int daySeven1 = seven.handRanking("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day7Info.txt", 1);
-    int daySeven2= seven.handRanking("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day7Info.txt", 2);
+//    int daySeven2= seven.handRanking("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day7Info.txt", 2);
+    long dayEight1 = dayeight.camelFind("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day8Info.txt");
+    long dayEight2 = dayeight.camelEnding("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day8Info.txt");
 
-    System.out.println(daySeven2);
+    System.out.println(dayEight2);
   }
 }
