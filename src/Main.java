@@ -18,9 +18,11 @@ public class Main {
 //    int daySeven2= seven.handRanking("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day7Info.txt", 2);
 //    long dayEight1 = dayeight.camelFind("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day8Info.txt");
 //    long dayEight2 = dayeight.camelEnding("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day8Info.txt");
-    int daynine1 = daynine.OASIS("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day9Info.txt", true);
-    int daynine2 = daynine.OASIS("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day9Info.txt", false);
+//    int daynine1 = daynine.OASIS("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day9Info.txt", true);
+//    int daynine2 = daynine.OASIS("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day9Info.txt", false);
+//      int dayten1 = dayten.farthestDist("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day10Info.txt", 1);
+    int dayten2 = dayten.farthestDist("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day10Info.txt", 2);
 
-    System.out.println(daynine2);
+    System.out.println(dayten2);
   }
 }
