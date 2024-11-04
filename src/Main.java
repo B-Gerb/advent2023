@@ -21,8 +21,11 @@ public class Main {
 //    int daynine1 = daynine.OASIS("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day9Info.txt", true);
 //    int daynine2 = daynine.OASIS("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day9Info.txt", false);
 //      int dayten1 = dayten.farthestDist("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day10Info.txt", 1);
-    int dayten2 = dayten.farthestDist("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day10Info.txt", 2);
+//    int dayten2 = dayten.farthestDist("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day10Info.txt", 2);
+    dayeleven eleven = new dayeleven();
+//    long dayeleven1 = eleven.shortPaths("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day11Info.txt", 1);
+    long dayeleven2 = eleven.shortPaths("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day11Info.txt", 1000000);
 
-    System.out.println(dayten2);
+    System.out.println(dayeleven2);
   }
 }
