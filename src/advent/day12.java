@@ -60,6 +60,7 @@ public class day12 {
     }
   }
   private long combos(String values, ArrayList<Integer> nums){
+
     if(memorization.containsKey(new ValuePair(values, nums))) return memorization.get(new ValuePair(values, nums));
     if(values.length()==0){
       if(nums.size() ==0){
