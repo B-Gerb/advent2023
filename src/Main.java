@@ -26,7 +26,9 @@ public class Main {
 //    long dayeleven1 = eleven.shortPaths("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day11Info.txt", 1);
 //    long dayeleven2 = eleven.shortPaths("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day11Info.txt", 1000000);
     day12 twelve = new day12();
-    int daytwelve1 = twelve.possibilities("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day12Info.text");
-    System.out.println(daytwelve1);
+    long daytwelve1 = twelve.possibilities("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day12Info.text");
+    long daytwelve2 = twelve.possibilitiespart2("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day12Info.text");
+
+    System.out.println(daytwelve2);
   }
 }
