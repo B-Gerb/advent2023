@@ -1,4 +1,6 @@
 import advent.*;
+import java.util.HashMap;
+import java.util.Map;
 public class Main {
   public static void main(String[] args) {
 //    int dayOne1 = dayone1.stringGather("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day1InfoP1.txt");
@@ -26,9 +28,12 @@ public class Main {
 //    long dayeleven1 = eleven.shortPaths("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day11Info.txt", 1);
 //    long dayeleven2 = eleven.shortPaths("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day11Info.txt", 1000000);
     day12 twelve = new day12();
-    long daytwelve1 = twelve.possibilities("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day12Info.text");
-    long daytwelve2 = twelve.possibilitiespart2("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day12Info.text");
+//    long daytwelve1 = twelve.possibilities("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day12Info.text");
+//    long daytwelve2 = twelve.possibilitiespart2("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day12Info.text");
+    day13 thirteen = new day13();
+    int daythirteen1 = thirteen.reflections("\\src\\advent\\day13Info.txt");
+    int daythirteen2 = thirteen.reflections2("\\src\\advent\\day13Info.txt");
 
-    System.out.println(daytwelve2);
+    System.out.println(daythirteen2);
   }
 }
