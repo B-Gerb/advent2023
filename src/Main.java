@@ -36,7 +36,8 @@ public class Main {
     day14 fourteen = new day14();
 
     int dayfourteen1 = fourteen.distance("\\src\\advent\\day14Info.txt");
+    int dayfourteen2 = fourteen.distanceMultiple("\\src\\advent\\day14Info.txt", 1000000000);
 
-    System.out.println(dayfourteen1);
+    System.out.println(dayfourteen2);
   }
 }
