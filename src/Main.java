@@ -31,9 +31,12 @@ public class Main {
 //    long daytwelve1 = twelve.possibilities("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day12Info.text");
 //    long daytwelve2 = twelve.possibilitiespart2("C:\\Users\\high5\\coding\\advent2023\\src\\advent\\day12Info.text");
     day13 thirteen = new day13();
-    int daythirteen1 = thirteen.reflections("\\src\\advent\\day13Info.txt");
-    int daythirteen2 = thirteen.reflections2("\\src\\advent\\day13Info.txt");
+//    int daythirteen1 = thirteen.reflections("\\src\\advent\\day13Info.txt");
+//    int daythirteen2 = thirteen.reflections2("\\src\\advent\\day13Info.txt");
+    day14 fourteen = new day14();
 
-    System.out.println(daythirteen2);
+    int dayfourteen1 = fourteen.distance("\\src\\advent\\day14Info.txt");
+
+    System.out.println(dayfourteen1);
   }
 }
