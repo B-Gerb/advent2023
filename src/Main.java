@@ -1,4 +1,7 @@
 import advent.*;
+
+import java.time.Duration;
+import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 public class Main {
@@ -34,10 +37,16 @@ public class Main {
 //    int daythirteen1 = thirteen.reflections("\\src\\advent\\day13Info.txt");
 //    int daythirteen2 = thirteen.reflections2("\\src\\advent\\day13Info.txt");
     day14 fourteen = new day14();
+//    int dayfourteen1 = fourteen.distance("\\src\\advent\\day14Info.txt");
+//    int dayfourteen2 = fourteen.distanceMultiple("\\src\\advent\\day14Info.txt", 1000000000);
+    day15 fifteen = new day15();
+    Instant start = Instant.now();
 
-    int dayfourteen1 = fourteen.distance("\\src\\advent\\day14Info.txt");
-    int dayfourteen2 = fourteen.distanceMultiple("\\src\\advent\\day14Info.txt", 1000000000);
+    int dayfifteen1 = fifteen.allValues("\\src\\advent\\day15Info.txt");
+    int dayfifteen2 = fifteen.mappingValues("\\src\\advent\\day15Info.txt");
+    Instant end = Instant.now();
+    Duration timeSpent = Duration.between(start,end);
 
-    System.out.println(dayfourteen2);
+    System.out.println("Answer: " + dayfifteen2 + " Time: " + timeSpent);
   }
 }
