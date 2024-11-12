@@ -105,7 +105,7 @@ public class day16 {
       }
     }
   }
-  public class visitor{
+  private class visitor{
     private boolean visited;
     private String dirc;
 
