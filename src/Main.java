@@ -48,8 +48,10 @@ public class Main {
     day16 sixteen = new day16();
     Instant start = Instant.now();
     int daysixteen1 = sixteen.reflectionTravel("\\src\\advent\\day16Info");
+    int daysixteen2 = sixteen.allTravel("\\src\\advent\\day16Info");
+
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
-    System.out.println("Answer: " + daysixteen1 + " Time: " + timeSpent);
+    System.out.println("Answer: " + daysixteen2 + " Time: " + timeSpent);
   }
 }

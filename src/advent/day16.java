@@ -5,8 +5,70 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.AbstractList;
 
 public class day16 {
+  public int allTravel(String fileName) {
+    try (Scanner sc = new Scanner(new File(System.getProperty("user.dir") + fileName))) {
+      List<List<Character>> grid = new ArrayList<>();
+      List<List<visitor>> visitingPath = new ArrayList<>();
+      while (sc.hasNextLine()) {
+        String s = sc.nextLine();
+        List<Character> toAddGrid = new ArrayList<>();
+        List<visitor> toAddPath = new ArrayList<>();
+
+        for (int i = 0; i < s.length(); i++) {
+          toAddGrid.add(s.charAt(i));
+          toAddPath.add(new visitor(false, ""));
+        }
+        grid.add(toAddGrid);
+        visitingPath.add(toAddPath);
+      }
+      int max = -1;
+      for(int i=0;i<grid.size(); ++i){
+        List<List<visitor>> shallowVisit1 = new ArrayList<>();
+        List<List<visitor>> shallowVisit2 = new ArrayList<>();
+        for (List<visitor> visitors : visitingPath) {
+          shallowVisit1.add(new ArrayList<>(visitors));
+          shallowVisit2.add(new ArrayList<>(visitors));
+        }
+        travel(grid, shallowVisit1, i, 0, "R");
+        travel(grid, shallowVisit2, i, grid.get(0).size()-1, "L");
+        max = Math.max(max, allCount(shallowVisit1));
+        max = Math.max(max, allCount(shallowVisit2));
+
+
+      }
+      for(int i=0;i<grid.get(0).size(); ++i){
+        List<List<visitor>> shallowVisit1 = new ArrayList<>();
+        List<List<visitor>> shallowVisit2 = new ArrayList<>();
+        for (List<visitor> visitors : visitingPath) {
+          shallowVisit1.add(new ArrayList<>(visitors));
+          shallowVisit2.add(new ArrayList<>(visitors));
+        }
+        travel(grid, shallowVisit1, 0, i, "D");
+        travel(grid, shallowVisit2,grid.size()-1, i, "U");
+        max = Math.max(max, allCount(shallowVisit1));
+        max = Math.max(max, allCount(shallowVisit2));
+      }
+      return max;
+    }
+    catch(Exception e){
+      System.out.println(e);
+      return -1;
+    }
+  }
+  public int allCount(List<List<visitor>> counting){
+    int total = 0;
+    for(int i=0; i<counting.size(); ++i){
+      for (visitor booleans : counting.get(i)) {
+        total += booleans.isVisited() ? 1 : 0;
+      }
+    }
+
+
+    return total;
+  }
   public int  reflectionTravel(String fileName){
     try(Scanner sc = new Scanner(new File( System.getProperty("user.dir")+ fileName))) {
       List<List<Character>> grid = new ArrayList<>();
@@ -24,15 +86,7 @@ public class day16 {
         visitingPath.add(toAddPath);
       }
       travel(grid, visitingPath, 0, 0, "R");
-      int total = 0;
-      for(int i=0; i<visitingPath.size(); ++i){
-        for (visitor booleans : visitingPath.get(i)) {
-          total += booleans.isVisited() ? 1 : 0;
-        }
-      }
-
-
-      return total;
+      return allCount(visitingPath);
     }
 
     catch(Exception e){
