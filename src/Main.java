@@ -46,19 +46,21 @@ public class Main {
 //    int dayfifteen2 = fifteen.mappingValues("\\src\\advent\\day15Info.txt");
 
 //    day16 sixteen = new day16();
-//    Instant start = Instant.now();
 //    int daysixteen1 = sixteen.reflectionTravel("\\src\\advent\\day16Info");
 //    int daysixteen2 = sixteen.allTravel("\\src\\advent\\day16Info");
 //
-//    Instant end = Instant.now();
-//    Duration timeSpent = Duration.between(start,end);
-    day17 seventeen = new day17();
+//    day17 seventeen = new day17();
+//    int dayseventeen1 = seventeen.leastDist("\\src\\advent\\day17Info.txt", false);
+//    int dayseventeen2 = seventeen.leastDist("\\src\\advent\\day17Info.txt", true);
+    day18 eighteen = new day18();
     Instant start = Instant.now();
-    int dayseventeen1 = seventeen.leastDist("\\src\\advent\\day17Info.txt", false);
-    int dayseventeen2 = seventeen.leastDist("\\src\\advent\\day17Info.txt", true);
+//    long dayeighteen1 = eighteen.shoeLace("\\src\\advent\\day18Info.txt");
+    long dayeighteen2 = eighteen.hexCalc("\\src\\advent\\day18Info.txt");
+
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
 
-    System.out.println("Answer: " + dayseventeen2 + " Time: " + timeSpent);
+    System.out.println("Answer: " + dayeighteen2 + " Time: " + timeSpent);
   }
+
 }
