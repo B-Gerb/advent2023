@@ -52,15 +52,18 @@ public class Main {
 //    day17 seventeen = new day17();
 //    int dayseventeen1 = seventeen.leastDist("\\src\\advent\\day17Info.txt", false);
 //    int dayseventeen2 = seventeen.leastDist("\\src\\advent\\day17Info.txt", true);
-    day18 eighteen = new day18();
-    Instant start = Instant.now();
+//    day18 eighteen = new day18();
 //    long dayeighteen1 = eighteen.shoeLace("\\src\\advent\\day18Info.txt");
-    long dayeighteen2 = eighteen.hexCalc("\\src\\advent\\day18Info.txt");
+//    long dayeighteen2 = eighteen.hexCalc("\\src\\advent\\day18Info.txt");
 
+    day19 ninteen = new day19();
+
+    Instant start = Instant.now();
+    int dayninteen1 = ninteen.expressionFigure("\\src\\advent\\day19Info.txt");
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
 
-    System.out.println("Answer: " + dayeighteen2 + " Time: " + timeSpent);
+    System.out.println("Answer: " + dayninteen1 + " Time: " + timeSpent);
   }
 
 }
