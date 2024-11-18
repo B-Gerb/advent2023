@@ -60,10 +60,12 @@ public class Main {
 
     Instant start = Instant.now();
     int dayninteen1 = ninteen.expressionFigure("\\src\\advent\\day19Info.txt");
+    long dayninteen2 = ninteen.rangeCreator("\\src\\advent\\day19Info.txt");
+
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
 
-    System.out.println("Answer: " + dayninteen1 + " Time: " + timeSpent);
+    System.out.println("Answer: " + dayninteen2 + " Time: " + timeSpent);
   }
 
 }
