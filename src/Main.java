@@ -56,16 +56,19 @@ public class Main {
 //    long dayeighteen1 = eighteen.shoeLace("\\src\\advent\\day18Info.txt");
 //    long dayeighteen2 = eighteen.hexCalc("\\src\\advent\\day18Info.txt");
 
-    day19 ninteen = new day19();
+//    day19 ninteen = new day19();
+//    int dayninteen1 = ninteen.expressionFigure("\\src\\advent\\day19Info.txt");
+//    long dayninteen2 = ninteen.rangeCreator("\\src\\advent\\day19Info.txt");
 
+    day20 twenty = new day20();
     Instant start = Instant.now();
-    int dayninteen1 = ninteen.expressionFigure("\\src\\advent\\day19Info.txt");
-    long dayninteen2 = ninteen.rangeCreator("\\src\\advent\\day19Info.txt");
+    long daytwenty1 = twenty.PulseProp("\\src\\advent\\day20Info.txt");
+    long daytwenty2 = twenty.SingleRx("\\src\\advent\\day20Info.txt");
 
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
 
-    System.out.println("Answer: " + dayninteen2 + " Time: " + timeSpent);
+    System.out.println("Answer: " + daytwenty2 + " Time: " + timeSpent);
   }
 
 }
