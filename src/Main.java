@@ -60,15 +60,18 @@ public class Main {
 //    int dayninteen1 = ninteen.expressionFigure("\\src\\advent\\day19Info.txt");
 //    long dayninteen2 = ninteen.rangeCreator("\\src\\advent\\day19Info.txt");
 
-    day20 twenty = new day20();
-    Instant start = Instant.now();
-    long daytwenty1 = twenty.PulseProp("\\src\\advent\\day20Info.txt");
-    long daytwenty2 = twenty.SingleRx("\\src\\advent\\day20Info.txt");
+//    day20 twenty = new day20();
+//    long daytwenty1 = twenty.PulseProp("\\src\\advent\\day20Info.txt");
+//    long daytwenty2 = twenty.SingleRx("\\src\\advent\\day20Info.txt");
 
+    day21 twentyone = new day21();
+    Instant start = Instant.now();
+    int daytwentyone1 = twentyone.possibleGardens("\\src\\advent\\day21Info.txt", 64);
+    long daytwentyone2 = twentyone.simulation("\\src\\advent\\day21Info.txt", 26501365);
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
 
-    System.out.println("Answer: " + daytwenty2 + " Time: " + timeSpent);
+    System.out.println("Answer: " + daytwentyone2 + " Time: " + timeSpent);
   }
 
 }
