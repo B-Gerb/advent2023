@@ -64,14 +64,19 @@ public class Main {
 //    long daytwenty1 = twenty.PulseProp("\\src\\advent\\day20Info.txt");
 //    long daytwenty2 = twenty.SingleRx("\\src\\advent\\day20Info.txt");
 
-    day21 twentyone = new day21();
+//    day21 twentyone = new day21();
+//    int daytwentyone1 = twentyone.possibleGardens("\\src\\advent\\day21Info.txt", 64);
+//    long daytwentyone2 = twentyone.simulation("\\src\\advent\\day21Info.txt", 26501365);
+
+    day22 twentytwo = new day22();
     Instant start = Instant.now();
-    int daytwentyone1 = twentyone.possibleGardens("\\src\\advent\\day21Info.txt", 64);
-    long daytwentyone2 = twentyone.simulation("\\src\\advent\\day21Info.txt", 26501365);
+    int daytwentytwo1 = twentytwo.brickFailing("\\src\\advent\\day22Info.txt");
+    int daytwentytwo2 = twentytwo.brickDisiengrate("\\src\\advent\\day22Info.txt");
+
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
 
-    System.out.println("Answer: " + daytwentyone2 + " Time: " + timeSpent);
+    System.out.println("Answer: " + daytwentytwo2 + " Time: " + timeSpent);
   }
 
 }
