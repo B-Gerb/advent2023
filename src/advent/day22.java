@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -104,35 +105,37 @@ public class day22 {
         }
       }
       int total = 0;
-      for(bricks b : values){
+      for (bricks b : values) {
         Set<bricks> possible = new HashSet<>();
-        List<bricks> newleyAdded = new ArrayList<>();
-        possible.add(b);
+        List<bricks> queue = new ArrayList<>();
         for(bricks checking : b.supporting){
-           if(checking.restingOn.size()==1){
-             possible.add(checking);
-             newleyAdded.add(checking);
-           }
+          if(checking.restingOn.size()==1){
+            possible.add(checking);
+            queue.add(checking);
+          }
         }
-        while(newleyAdded.size() != 0) {
-          List<bricks> toOver = new ArrayList<>();
-          for (bricks check : newleyAdded) {
-            for (bricks checking : check.supporting) {
+        possible.add(b);
+
+        while (!queue.isEmpty()) {
+          bricks current = queue.remove(0);
+
+          for (bricks checking : current.supporting) {
+            if (!possible.contains(checking)) {
+
               boolean allGood = true;
-              for (bricks c : checking.restingOn) {
-                if (!possible.contains(c)) {
-                  allGood = false;
-                  break;
-                }
-              }
-              if (allGood) {
-                possible.add(checking);
-                toOver.add(checking);
+            for (bricks c : checking.restingOn) {
+              if (!possible.contains(c)) {
+                allGood = false;
+                break;
               }
             }
-          }
-          newleyAdded = toOver;
 
+            if (allGood) {
+              possible.add(checking);
+              queue.add(checking);
+            }
+          }
+        }
         }
         total += possible.size()-1;
 
