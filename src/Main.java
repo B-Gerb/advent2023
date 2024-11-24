@@ -68,15 +68,21 @@ public class Main {
 //    int daytwentyone1 = twentyone.possibleGardens("\\src\\advent\\day21Info.txt", 64);
 //    long daytwentyone2 = twentyone.simulation("\\src\\advent\\day21Info.txt", 26501365);
 
-    day22 twentytwo = new day22();
+//    day22 twentytwo = new day22();
+//    int daytwentytwo1 = twentytwo.brickFailing("\\src\\advent\\day22Info.txt");
+//    int daytwentytwo2 = twentytwo.brickDisiengrate("\\src\\advent\\day22Info.txt");
+
+    day23 twentythree = new day23();
     Instant start = Instant.now();
-    int daytwentytwo1 = twentytwo.brickFailing("\\src\\advent\\day22Info.txt");
-    int daytwentytwo2 = twentytwo.brickDisiengrate("\\src\\advent\\day22Info.txt");
+    int daytwentythree1 = twentythree.ReverseDijkstra("\\src\\advent\\day23Info.txt");
+    int daytwentythree2 = twentythree.ReverseDijkstraModify("\\src\\advent\\day23Info.txt");
+
+
 
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
 
-    System.out.println("Answer: " + daytwentytwo2 + " Time: " + timeSpent);
+    System.out.println("Answer: " + daytwentythree2 + " Time: " + timeSpent);
   }
 
 }
