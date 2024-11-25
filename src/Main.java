@@ -72,17 +72,22 @@ public class Main {
 //    int daytwentytwo1 = twentytwo.brickFailing("\\src\\advent\\day22Info.txt");
 //    int daytwentytwo2 = twentytwo.brickDisiengrate("\\src\\advent\\day22Info.txt");
 
-    day23 twentythree = new day23();
+//    day23 twentythree = new day23();
+//    int daytwentythree1 = twentythree.ReverseDijkstra("\\src\\advent\\day23Info.txt");
+//    int daytwentythree2 = twentythree.ReverseDijkstraModify("\\src\\advent\\day23Info.txt");
+
+    day24 twentyfour = new day24();
     Instant start = Instant.now();
-    int daytwentythree1 = twentythree.ReverseDijkstra("\\src\\advent\\day23Info.txt");
-    int daytwentythree2 = twentythree.ReverseDijkstraModify("\\src\\advent\\day23Info.txt");
+
+    double twentyfour1= twentyfour.amountColl("\\src\\advent\\day24Info.txt", 200000000000000d, 400000000000000d);
+
 
 
 
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
 
-    System.out.println("Answer: " + daytwentythree2 + " Time: " + timeSpent);
+    System.out.println("Answer: " + twentyfour1 + " Time: " + timeSpent);
   }
 
 }
