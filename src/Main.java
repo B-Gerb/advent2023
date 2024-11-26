@@ -80,6 +80,7 @@ public class Main {
     Instant start = Instant.now();
 
     double twentyfour1= twentyfour.amountColl("\\src\\advent\\day24Info.txt", 200000000000000d, 400000000000000d);
+    double twentyfour2= twentyfour.integerIntersection("\\src\\advent\\day24Info.txt");
 
 
 
@@ -87,7 +88,7 @@ public class Main {
     Instant end = Instant.now();
     Duration timeSpent = Duration.between(start,end);
 
-    System.out.println("Answer: " + twentyfour1 + " Time: " + timeSpent);
+    System.out.println("Answer: " + twentyfour2 + " Time: " + timeSpent);
   }
 
 }
